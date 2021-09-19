@@ -160,23 +160,6 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 if (flagCheck==0){
                     Toast.makeText(getActivity(), "Чтобы открыть эту возможность, необходимо пройти все уроки уровня", Toast.LENGTH_SHORT).show();
-                } else{
-                    String massWords = "Акча,Сатып алырга,Кирэк,"+"Миңа,Ундүрт,"+"Мин,Соңгы,Кәтлит";
-                    String massTranslate = "Деньги,Купить,Надо,"+"Мне,Четырнадцать,"+"Я,Последний,Котлета";
-                    String massSound = "[акча],[сотып алырга],[кирэк],"+"[мина],[ундурт],"+"[мин],[сонго],[кэтлит]";
-                    String massIncorrect = "Дерево,Чайка,Лапша,Подсмотреть,Никак,Поздно,Жизнь,Лошадь,Есть,Красивый,Видимо,"+"Солнце,Десять,Твое,Тридцать,Четыре,Кока-кола,Торнадо,Труба,Картина";
-                    String memeText = "Акча сатып алырга кирэк,"+"Миңа ундүрт,"+"Миңа соңгы кәтлит";
-                    String memeTranslate = "Надо купить денег,"+"Мне четырнадцать,"+"Я и последняя котлета";
-
-                    MainActivity.setDefaults("words", massWords, getContext());
-                    MainActivity.setDefaults("translates", massTranslate, getContext());
-                    MainActivity.setDefaults("sounds", massSound, getContext());
-                    MainActivity.setDefaults("incorrects", massIncorrect, getContext());
-                    MainActivity.setDefaults("meme", memeText, getContext());
-                    MainActivity.setDefaults("memetr", memeTranslate, getContext());
-                    MainActivity.setDefaults("number", "111111", getContext());
-
-                    startActivity(new Intent(getActivity(), MemStudy.class));
                 }
             }
         });

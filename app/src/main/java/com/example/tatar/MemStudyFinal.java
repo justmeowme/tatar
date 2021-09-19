@@ -19,8 +19,6 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MemStudyFinal extends AppCompatActivity {
 
-    FirebaseAuth mAuth;
-    String id;
     int flag = 0;
     Button mTranslate, mNext;
     TextView mMemeText;
@@ -48,10 +46,6 @@ public class MemStudyFinal extends AppCompatActivity {
         }
         if (MainActivity.getDefaults("number", MemStudyFinal.this).length() == 5){
             mImage.setImageResource(R.drawable.meme5);
-        }
-        if (MainActivity.getDefaults("number", MemStudyFinal.this).length() == 6){
-            mImage.setImageResource(R.drawable.molodec);
-            startActivity(new Intent(MemStudyFinal.this, MenuActivity.class));
         }
 
 
@@ -95,31 +89,10 @@ public class MemStudyFinal extends AppCompatActivity {
 
                 if (MainActivity.getDefaults("number", MemStudyFinal.this).length() == 5){
                     MainActivity.setDefaults("done5", "yes", MemStudyFinal.this);
-                    startActivity(new Intent(MemStudyFinal.this, MenuActivity.class));
                 }
 
-
-                id = mAuth.getInstance().getUid();
-
-                FirebaseFirestore.getInstance().collection("users").document(id).get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-                    @Override
-                    public void onSuccess(DocumentSnapshot documentSnapshot) {
-                        if (documentSnapshot.exists()){
-                            String score = documentSnapshot.getString("score");
-                            int s1 = Integer.valueOf(score) + 20;
-                            if (s1 > 100){
-                                s1 = 100;
-                            }
-                            MainFragment.mProgressBar.setProgress(s1);
-                            UserFragment.mProgressBar1.setProgress(s1);
-
-                            FirebaseFirestore.getInstance().collection("users").document(id).update("score", String.valueOf(s1));
-
-                        }
-                    }
-                });
-
                 startActivity(new Intent(MemStudyFinal.this, MenuActivity.class));
+
             }
         });
 
