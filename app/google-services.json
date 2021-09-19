@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "667122784390",
+    "project_id": "tatar-fdfc3",
+    "storage_bucket": "tatar-fdfc3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:667122784390:android:13ca400803dbc97c309907",
+        "android_client_info": {
+          "package_name": "com.example.tatar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "667122784390-vlg4fssbeguv8cqippiqb7j7mlgai6rl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAwjjC8QFMVYWcgzq7LqT4qrAFU2UAiSF0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "667122784390-vlg4fssbeguv8cqippiqb7j7mlgai6rl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

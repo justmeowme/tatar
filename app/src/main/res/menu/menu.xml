@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/main"
+        android:title="Главная"
+        android:icon="@drawable/icontriangle"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/friends"
+        android:title="Рейтинг"
+        android:icon="@drawable/iconcup"
+        app:showAsAction="ifRoom">
+    </item>
+    <item
+        android:id="@+id/user"
+        android:title="Профиль"
+        android:icon="@drawable/iconuser"
+        app:showAsAction="ifRoom">
+    </item>
+</menu>
